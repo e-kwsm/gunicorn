@@ -177,9 +177,9 @@ Here is an `example service`_ definition::
 
     APP=main:application
 
-    if [ -f $PID ]; then rm $PID; fi
+    rm -f $PID
 
-    cd $ROOT
+    cd $ROOT || exit
     exec $GUNICORN -c $ROOT/gunicorn.conf.py --pid=$PID $APP
 
 Save this as ``/etc/sv/[app_name]/run``, and make it executable
