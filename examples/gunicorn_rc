@@ -6,7 +6,7 @@ PID=/var/run/gunicorn.pid
 
 APP=main:application
 
-if [ -f $PID ]; then rm $PID; fi
+rm -f $PID
 
-cd $ROOT
+cd $ROOT || exit
 exec $GUNICORN -c $ROOT/gunicorn.conf.py --pid=$PID $APP
