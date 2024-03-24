@@ -1405,7 +1405,7 @@ The variables are passed to the PasteDeploy entrypoint. Example::
 
 **Default:** ``False``
 
-Strip spaces present between the header name and the the ``:``.
+Strip spaces present between the header name and the ``:``.
 
 This is known to induce vulnerabilities and is not compliant with the HTTP/1.1 standard.
 See https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn.
